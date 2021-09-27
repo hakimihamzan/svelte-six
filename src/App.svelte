@@ -3,6 +3,7 @@
   let belt = "black";
   let firstName = "Yoshi";
   let lastName = "Nori";
+  let test = "Here";
 
   // reactive values -- updated DOM when value changed
   $: fullName = `${firstName} ${lastName}`;
@@ -32,10 +33,12 @@
   <!-- binding the style here with the value of belt -->
   <p>{fullName}</p>
   <p style="color:{belt}">belt Colour {belt}</p>
+  <p>{test}</p>
   <!-- shorthand two way binding  -->
   <input type="text" bind:value={firstName} />
   <input type="text" bind:value={lastName} />
   <input type="text" bind:value={belt} />
+  <input type="text" bind:value={test} />
 </main>
 
 <style>
